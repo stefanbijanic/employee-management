@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "8ab1e5bb-26d1-4f41-91a0-2b9f3a179909",
+		"name": "Employee management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15480458"
+	},
+	"item": [
+		{
+			"name": "GET get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/employees?page=1&limit=5",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"MARIJAN bOBANOVIC\",\r\n    \"email\": \"bobanovic@gmail.com\",\r\n    \"phoneNumber\": \"+999999999\",\r\n    \"homeAddress\": {\r\n        \"city\": \"Belgrade\",\r\n        \"zipCode\": \"11070\",\r\n        \"addressLine1\": \"gandijeva 123\"\r\n    },\r\n    \"dateOfEmployment\": \"2020-01-27\",\r\n    \"dateOfBirth\": \"1996-01-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/employees/employee/e07c4f3d-37dc-4c3a-9b4f-7dcb945d7c8d",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees",
+						"employee",
+						"e07c4f3d-37dc-4c3a-9b4f-7dcb945d7c8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update employee info by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marko marinko\",\r\n    \"phoneNumber\": \"+355345699\",\r\n    \"homeAddress\": {\r\n        \"city\": \"Belgrade\",\r\n        \"zipCode\": \"11070\",\r\n        \"addressLine1\": \"gandijeva 123\",\r\n        \"addressLine2\": \"nehruova 22\"\r\n    },\r\n    \"dateOfEmployment\": \"2020-01-27\",\r\n    \"dateOfBirth\": \"1996-01-27\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/employees/employee/e07c4f3d-37dc-4c3a-9b4f-7dcb945d7c8d",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees",
+						"employee",
+						"e07c4f3d-37dc-4c3a-9b4f-7dcb945d7c8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE deactivate employee by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/employees/employee/22265df2-2fc0-4248-a136-68c55e750712",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees",
+						"employee",
+						"22265df2-2fc0-4248-a136-68c55e750712"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET get all deactivated employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/employees/deactivated",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"employees",
+						"deactivated"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
