@@ -45,6 +45,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## API Postman collection
+
+```
+# All API routes can be found in ./postman_collection/Dream jurnal.postman_collection.json file
+```
+
 ## Test
 
 ```bash
