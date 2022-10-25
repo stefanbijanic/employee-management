@@ -45,10 +45,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## API Postman collection
+## API routes & Postman collection
 
 ```
 # All API routes can be found in ./postman_collection/Dream jurnal.postman_collection.json file
+# You can use Swagger / OpenAPI from your browser port: 3001  route: /api (localhost:3001/api)
 ```
 
 ## Test
